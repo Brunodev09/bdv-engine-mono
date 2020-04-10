@@ -90,11 +90,11 @@ namespace bdv
                         {
 
                             Texture2D tex = Content.Load<Texture2D>(obj.sprite.filepath);
-                            spriteBatch.Draw(tex, new Rectangle((int)obj.position.x, (int)obj.position.y,
-                                obj.dimension.Width, obj.dimension.Height), Color.White);
-                            spriteBatch.Draw(tex, new Vector2(obj.position.x, obj.position.y), new Rectangle(obj.sprite.spriteWidth.x,
-                                obj.sprite.spriteHeight.y, obj.sprite.spriteWidth.y, obj.sprite.spriteHeight.y), Color.White);
-
+                            spriteBatch.Draw(tex,
+                                new Rectangle((int)obj.position.x, (int)obj.position.y, obj.dimension.Width, obj.dimension.Height),
+                                new Rectangle(obj.sprite.spriteWidth.x,
+                                    obj.sprite.spriteHeight.y, obj.sprite.spriteWidth.y, obj.sprite.spriteHeight.y),
+                                    Color.White);
                             break;
                         }
                 }

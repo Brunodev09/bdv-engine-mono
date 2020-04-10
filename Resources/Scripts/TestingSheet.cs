@@ -14,10 +14,10 @@ namespace Scripts
         public TestingSheet()
         {
             Resolution = new Dimension(800, 600);
-            BackgroundColor = new RGBA(255, 255, 255, 255);
+            BackgroundColor = new RGBA(0, 0, 0, 255);
             Entities = new List<Entity>();
-            var RedTile = new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(0, 1), Point<int>.Factory(0, 1));
-            Entities.Add(new Entity(Point<float>.Factory(50, 50), new Dimension(10, 10), RedTile));
+            var RedTile = new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(2, 0), Point<int>.Factory(0, 0));
+            Entities.Add(new Entity(Point<float>.Factory(50, 50), new Dimension(100, 100), RedTile));
         }
 
         public void Update()
