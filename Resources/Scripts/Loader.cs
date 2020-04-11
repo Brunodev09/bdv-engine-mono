@@ -10,8 +10,8 @@ namespace Scripts
         {
             // ScriptsToLoad.Add(new GridTemplate());
             // ScriptsToLoad.Add(new MovingShapes());
-            // ScriptsToLoad.Add(new Conways());
-            ScriptsToLoad.Add(new TestingSheet());
+             ScriptsToLoad.Add(new Conways());
+            // ScriptsToLoad.Add(new TestingSheet());
         }
     }
 }

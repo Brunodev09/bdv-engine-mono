@@ -24,7 +24,7 @@ namespace Scripts
         public Conways()
         {
             Resolution = new Dimension(800, 600);
-            BackgroundColor = new RGBA(255, 255, 255, 255);
+            BackgroundColor = new RGBA(0, 0, 0, 255);
             Entities = new List<Entity>();
             BufferedEntities = new List<Entity>();
 
@@ -45,7 +45,7 @@ namespace Scripts
                         Entities.Add(new Entity(
                         Point<float>.Factory(tileSize.Width * i + i, tileSize.Height * j + j),
                         tileSize,
-                        new RGBA(255, 255, 0, 255)));
+                        new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(12, 0), Point<int>.Factory(0, 0))));
                     }
                     else
                     {
@@ -55,7 +55,7 @@ namespace Scripts
                         Entities.Add(new Entity(
                         Point<float>.Factory(tileSize.Width * i + i, tileSize.Height * j + j),
                         tileSize,
-                        new RGBA(0, 0, 0, 255)));
+                        new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(0, 0), Point<int>.Factory(0, 0))));
                     }
                 }
             }
@@ -135,10 +135,12 @@ namespace Scripts
                     if (Matrix[i, j] == 0)
                     {
                         Entities[counter].color = new RGBA(255, 255, 0, 255);
+                        Entities[counter].sprite = new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(12, 0), Point<int>.Factory(0, 0));
                     }
                     else
                     {
                         Entities[counter].color = new RGBA(0, 0, 0, 255);
+                        Entities[counter].sprite = new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(0, 0), Point<int>.Factory(0, 0));
                     }
                     counter++;
                 }

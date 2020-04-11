@@ -16,10 +16,10 @@ namespace Scripts
             Entities = new List<Entity>();
             Entities.Add(new Entity(
              Point<float>.Factory(0.0f, 0.0f),
-              new Dimension(100, 100), new RGBA(255, 0, 0, 255)));
+              new Dimension(100, 100), new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(2, 0), Point<int>.Factory(0, 0))));
             Entities.Add(new Entity(
            Point<float>.Factory(350.0f, 150.0f),
-            new Dimension(100, 100), new RGBA(0, 255, 0, 255)));
+            new Dimension(100, 100), new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(4, 0), Point<int>.Factory(0, 0))));
             foreach (var obj in Entities)
             {
                 obj.SetSpeed(Point<float>.Factory(5.0f, 5.0f));

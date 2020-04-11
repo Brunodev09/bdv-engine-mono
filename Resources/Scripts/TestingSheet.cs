@@ -16,7 +16,7 @@ namespace Scripts
             Resolution = new Dimension(800, 600);
             BackgroundColor = new RGBA(0, 0, 0, 255);
             Entities = new List<Entity>();
-            var RedTile = new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(2, 0), Point<int>.Factory(0, 0));
+            var RedTile = new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(3, 0), Point<int>.Factory(0, 0));
             Entities.Add(new Entity(Point<float>.Factory(50, 50), new Dimension(100, 100), RedTile));
         }
 

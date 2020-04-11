@@ -88,7 +88,6 @@ namespace bdv
                         }
                     case ModelBdv.SPRITESHEET:
                         {
-
                             Texture2D tex = Content.Load<Texture2D>(obj.sprite.filepath);
                             spriteBatch.Draw(tex,
                                 new Rectangle((int)obj.position.x, (int)obj.position.y, obj.dimension.Width, obj.dimension.Height),

@@ -24,7 +24,7 @@ namespace Scripts
                     Entities.Add(new Entity(
                         Point<float>.Factory(tileSize.Width * i + i, tileSize.Height * j + j),
                         tileSize,
-                        new RGBA(255, 0, 255, 255)));
+                        new SpriteSheet("Sprites/DefaultSpritesheet", Point<int>.Factory(1, 0), Point<int>.Factory(0, 0))));
                 }
             }
         }
