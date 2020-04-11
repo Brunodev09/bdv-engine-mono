@@ -20,13 +20,13 @@ namespace bdv
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            graphics.PreferredBackBufferWidth = RunScripts.ScriptsToLoad[0].Resolution.Width;
-            graphics.PreferredBackBufferHeight = RunScripts.ScriptsToLoad[0].Resolution.Height;
+            graphics.PreferredBackBufferWidth = RunScripts.ScriptToLoad.Resolution.Width;
+            graphics.PreferredBackBufferHeight = RunScripts.ScriptToLoad.Resolution.Height;
         }
 
         protected override void Initialize()
         {
-            var objects = RunScripts.ScriptsToLoad[0].Entities;
+            var objects = RunScripts.ScriptToLoad.Entities;
             foreach (var obj in objects)
             {
                 engine.render.RequestQueue().Enqueue(obj);
@@ -46,14 +46,14 @@ namespace bdv
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            RunScripts.ScriptsToLoad[0].Update();
+            RunScripts.ScriptToLoad.Update();
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            RGBA BackgroundColor = RunScripts.ScriptsToLoad[0].BackgroundColor;
+            RGBA BackgroundColor = RunScripts.ScriptToLoad.BackgroundColor;
             GraphicsDevice.Clear(new Color(BackgroundColor.R, BackgroundColor.G, BackgroundColor.B));
             var objects = engine.render.RequestQueue().GetQueue();
 

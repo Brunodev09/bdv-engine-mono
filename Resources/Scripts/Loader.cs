@@ -5,12 +5,12 @@ namespace Scripts
 {
     public class Loader
     {
-        public List<IScript> ScriptsToLoad = new List<IScript>();
+        public IScript ScriptToLoad;
         public Loader()
         {
             // ScriptsToLoad.Add(new GridTemplate());
             // ScriptsToLoad.Add(new MovingShapes());
-             ScriptsToLoad.Add(new Conways());
+             ScriptToLoad = new Conways();
             // ScriptsToLoad.Add(new TestingSheet());
         }
     }
